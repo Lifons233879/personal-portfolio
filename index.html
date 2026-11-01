@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="プログラミングと創作活動をまとめた個人ポートフォリオ。">
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="index.html" aria-label="Personal Portfolio ホーム">PORTFOLIO<span class="blue-dot">.</span></a>
+      <nav class="main-nav" aria-label="メインナビゲーション">
+        <a href="#about">ABOUT</a>
+        <a href="#works">WORKS</a>
+        <a href="#links">LINKS</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">HELLO, WORLD.</p>
+        <h1>興味を、<br>形にする。</h1>
+        <p class="hero-lead">プログラミングと創作を通じて、アイデアを作品に。</p>
+        <p class="hero-note">PROGRAMMING <span>·</span> CREATIVE <span>·</span> TECHNOLOGY</p>
+        <a class="text-link" href="#works">作品を見る <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-visual reveal" aria-label="抽象的な青い幾何学模様">
+        <div class="visual-orbit orbit-one"></div>
+        <div class="visual-orbit orbit-two"></div>
+        <div class="visual-core"></div>
+        <span class="visual-label">IDEAS INTO REALITY / 2026</span>
+      </div>
+    </section>
+
+    <section class="section container" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 / ABOUT</p>
+        <h2>About Me<span class="blue-dot">.</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p>プログラミングやデジタル表現に興味があり、ゲーム制作やシミュレーションなど、さまざまな制作に取り組んでいます。</p>
+          <p>学んだ技術を試しながら、思いついたアイデアを少しずつ形にしていくことが目標です。このサイトでは、制作物や学習の記録を紹介していきます。</p>
+        </div>
+        <dl class="profile-list reveal">
+          <div><dt>NAME</dt><dd>Lifons</dd></div>
+          <div><dt>FOCUS</dt><dd>Programming / Creative Coding</dd></div>
+          <div><dt>TOOLS</dt><dd>C / Python / Processing / HTML / CSS</dd></div>
+          <div><dt>INTERESTS</dt><dd>ゲーム制作・デジタルアート・音楽</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section container" id="works">
+      <div class="section-heading reveal">
+        <p class="eyebrow">02 / SELECTED WORKS</p>
+        <h2>作ったもの<span class="blue-dot">.</span></h2>
+        <p class="section-intro">学びながら制作した作品を紹介します。</p>
+      </div>
+      <div class="work-grid">
+        <article class="work-card reveal">
+          <a class="work-image game-art" href="works/browser-game/index.html" aria-label="ブラウザゲームの詳細を見る">
+            <span class="pixel-star star-a"></span><span class="pixel-star star-b"></span><span class="pixel-star star-c"></span>
+            <span class="pixel-ship">▲</span><span class="pixel-enemy enemy-a">◆</span><span class="pixel-enemy enemy-b">◆</span>
+            <span class="image-index">WORK 01</span>
+          </a>
+          <div class="work-meta"><span>GAME DEVELOPMENT</span><span>2026</span></div>
+          <h3><a href="works/browser-game/index.html">避けろ！ ヘーベルハウス君！ <span aria-hidden="true">↗</span></a></h3>
+          <p>スコア記録や敵キャラクターの動きを実装した、初めてのブラウザゲーム。</p>
+          <a class="text-link" href="works/browser-game/index.html">作品詳細 <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="work-card reveal">
+          <a class="work-image cosmic-art" href="works/cosmic-simulation/index.html" aria-label="宇宙シミュレーションの詳細を見る">
+            <span class="cosmic-glow"></span><span class="cosmic-ring"></span><span class="image-index">WORK 02</span>
+          </a>
+          <div class="work-meta"><span>GENERATIVE ART</span><span>2026</span></div>
+          <h3><a href="works/cosmic-simulation/index.html">Cosmic Simulation <span aria-hidden="true">↗</span></a></h3>
+          <p>星や粒子、銀河の衝突などをプログラムで表現したジェネレーティブアート。</p>
+          <a class="text-link" href="works/cosmic-simulation/index.html">作品詳細 <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section links-section container" id="links">
+      <div class="section-heading reveal">
+        <p class="eyebrow">03 / LINKS</p>
+        <h2>Find me online<span class="blue-dot">.</span></h2>
+      </div>
+      <a class="external-link reveal" href="https://github.com/" target="_blank" rel="noreferrer">
+        <span><strong>GitHub</strong><small>制作物・ソースコード</small></span><span class="external-arrow" aria-hidden="true">↗</span>
+      </a>
+      <p class="small-note">リンク先は公開前に自分のGitHubプロフィールへ変更してください。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner"><a class="wordmark" href="index.html">PORTFOLIO<span class="blue-dot">.</span></a><p>© 2026 Personal Portfolio</p><a href="#main" class="back-top">BACK TO TOP ↑</a></div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
