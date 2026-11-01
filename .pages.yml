@@ -35,5 +35,5 @@ media:
         type: rich-text
         required: true
         options:
-          media: media
+          media: blog_images
           path: assets/images/blog
