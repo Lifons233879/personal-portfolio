@@ -1,46 +1,36 @@
-# Personal Portfolio
+# Personal Portfolio + Blog
 
-白・黒・青を基調にした、ミニマルな個人ポートフォリオのスターターです。
+既存の白・黒・青のポートフォリオに、JekyllベースのブログとPages CMSの編集画面を追加した構成です。
 
-## ファイル構成
+## 追加されたもの
 
-```text
-personal-portfolio/
-├── index.html
-├── assets/
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   └── main.js
-│   └── images/
-└── works/
-    ├── browser-game/
-    │   └── index.html
-    └── cosmic-simulation/
-        └── index.html
-```
+- `blog/`：記事一覧とカテゴリー絞り込み
+- `_layouts/`：ブログ・記事ページの共通レイアウト
+- `_posts/`：記事ファイル（Markdown）
+- `.pages.yml`：Pages CMSの編集画面設定
+- `assets/js/blog.js`：カテゴリー絞り込み
+- `assets/images/blog/`：記事画像の保存先
 
-## Macでのプレビュー
+## GitHub Pages
 
-1. ZIPを展開します。
-2. `index.html` をSafariまたはChromeで開きます。
-3. 内容を変更したら、ブラウザを再読み込みします。
+リポジトリ名が `personal-portfolio` である前提で `_config.yml` の `baseurl` を `/personal-portfolio` にしています。リポジトリ名が異なる場合は、その値を実際のリポジトリ名に変更してください。
 
-## 公開前に変更するところ
+GitHubの Settings → Pages で Branch `main` / Folder `/(root)` を選択します。GitHub PagesはJekyllを使ってMarkdown記事をHTMLに変換します。
 
-- `index.html` の「ハンドルネームを設定してください」を自分のハンドルネームに変更
-- GitHubリンクを自分のプロフィールURLに変更
-- 作品説明・制作年・使用技術を実際の内容に合わせて確認
-- 作品詳細ページに実際のゲームURLやリポジトリURLを追加
-- イメージ用CSSアートを、必要に応じて自分の作品スクリーンショットに差し替え
+## ブラウザから記事を編集する
 
-## GitHub Pagesで公開する
+1. https://app.pagescms.org/ を開き、GitHubでサインインします。
+2. Pages CMSのGitHub Appに、対象リポジトリへのアクセスを許可します。
+3. `personal-portfolio` リポジトリを開き、`main` ブランチを選択します。
+4. `.pages.yml` を読み込み、`ブログ記事` コレクションを開きます。
+5. 記事を作成・編集し、画像を挿入して保存します。保存内容はGitHubにコミットされ、Pagesの再ビルド後に公開サイトへ反映されます。
 
-1. GitHubで新しいリポジトリを作成します（例：`personal-portfolio`）。
-2. このフォルダ内のファイルとフォルダをリポジトリの最上位にアップロードします。
-3. リポジトリの **Settings → Pages** を開きます。
-4. Build and deployment の Source で **Deploy from a branch** を選びます。
-5. Branch を `main`、フォルダを `/(root)` にして保存します。
-6. 公開処理が終わったら表示されたURLを開きます。
+## 下書きと公開
 
-※ このサイトは静的サイトです。問い合わせフォームやサーバー処理は含んでいません。
+- `公開する` をOFFにすると `published: false` になり、サイトに表示されません。
+- 公開するときはONにして保存します。
+- リポジトリがPublicの場合、下書きの内容もGitHub上のソースファイルとして閲覧できる可能性があります。公開前の秘密情報は保存しないでください。
+
+## 注意
+
+Pages CMSはGitHubアカウントで認証し、リポジトリへ直接変更を保存する外部編集画面です。初回にGitHub Appのアクセス許可が必要です。

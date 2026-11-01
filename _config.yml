@@ -1,0 +1,7 @@
+title: Personal Portfolio
+description: プログラミングと創作活動をまとめた個人ポートフォリオ。
+baseurl: "/personal-portfolio"
+url: ""
+markdown: kramdown
+permalink: /blog/:title/
+show_excerpts: true
