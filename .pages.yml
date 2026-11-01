@@ -4,7 +4,8 @@ media:
     input: assets/images/blog
     output: /assets/images/blog
     categories:
-      - imagecontent:
+      - image
+content:
   - name: posts
     label: ブログ記事
     type: collection
