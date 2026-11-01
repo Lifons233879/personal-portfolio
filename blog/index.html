@@ -1,0 +1,28 @@
+---
+layout: blog
+title: Blog
+permalink: /blog/
+---
+<section class="container blog-content">
+  <div class="category-filter" aria-label="カテゴリーで絞り込む">
+    <button class="category-button is-active" type="button" data-category="all">すべて</button>
+    {% assign categories = site.posts | map: 'category' | compact | uniq | sort %}
+    {% for category in categories %}<button class="category-button" type="button" data-category="{{ category | escape }}">{{ category | escape }}</button>{% endfor %}
+  </div>
+  <div class="blog-grid" id="blog-list">
+    {% assign visible_posts = site.posts | where_exp: 'post', 'post.published != false' %}
+    {% for post in visible_posts %}
+    <article class="blog-card" data-category="{{ post.category | default: 'その他' | escape }}">
+      <a class="blog-card-link" href="{{ post.url | relative_url }}">
+        {% if post.image and post.image != '' %}<img class="blog-card-image" src="{{ post.image | relative_url }}" alt="">{% else %}<div class="blog-card-art" aria-hidden="true"><span>BLOG / {{ forloop.index | prepend: '0' }}</span></div>{% endif %}
+        <div class="blog-card-meta"><span>{{ post.category | default: 'その他' | escape }}</span><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y.%m.%d' }}</time></div>
+        <h2>{{ post.title | escape }}</h2>
+        {% if post.description %}<p>{{ post.description | escape }}</p>{% else %}<p>{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>{% endif %}
+        <span class="text-link">記事を読む <span aria-hidden="true">→</span></span>
+      </a>
+    </article>
+    {% endfor %}
+  </div>
+  <p class="blog-empty" id="blog-empty" {% if visible_posts.size > 0 %}hidden{% endif %}>まだ公開記事がありません。記事編集画面から最初の記事を公開してみよう。</p>
+</section>
+<script src="{{ '/assets/js/blog.js' | relative_url }}"></script>
