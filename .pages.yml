@@ -1,7 +1,10 @@
 media:
-  input: assets/images/blog
-  output: /assets/images/blog
-content:
+  - name: blog_images
+    label: ブログ画像
+    input: assets/images/blog
+    output: /assets/images/blog
+    categories:
+      - imagecontent:
   - name: posts
     label: ブログ記事
     type: collection
