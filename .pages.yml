@@ -1,1 +1,35 @@
 
+media:
+  input: assets/images/blog
+  output: /assets/images/blog
+content:
+  - name: posts
+    label: ブログ記事
+    type: collection
+    path: _posts
+    filename: "{year}-{month}-{day}-{primary}.md"
+    format: yaml-frontmatter
+    view:
+      primary: title
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        label: タイトル
+        type: string
+        required: true
+      - name: date
+        label: 投稿日
+        type: date
+        required: true
+      - name: categories
+        label: カテゴリ
+        type: string
+      - name: published
+        label: 公開する
+        type: boolean
+      - name: body
+        label: 本文
+        type: rich-text
+        required: true
+
