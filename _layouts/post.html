@@ -10,6 +10,8 @@ layout: default
     {% if page.image and page.image != '' %}<img class="article-cover" src="{{ page.image }}" alt="">{% endif %}
     {% if page.description %}<p class="article-lead">{{ page.description | escape }}</p>{% endif %}
   </header>
-  <div class="article-body">{{ content }}</div>
+  {% capture asset_src_prefix %}src="{{ '/assets/' | relative_url }}{% endcapture %}
+  {% assign fixed_content = content | replace: 'src="/assets/', asset_src_prefix %}
+  <div class="article-body">{{ fixed_content }}</div>
   <a class="back-link" href="{{ '/blog/' | relative_url }}">← 記事一覧へ戻る</a>
 </article>
