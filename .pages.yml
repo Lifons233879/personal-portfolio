@@ -27,7 +27,7 @@ content:
         label: 投稿日
         type: date
         required: true
-      - name: categories
+      - name: category
         label: カテゴリ
         type: string
       - name: published
