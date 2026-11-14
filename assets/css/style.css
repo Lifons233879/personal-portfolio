@@ -180,3 +180,9 @@ img { display: block; max-width: 100%; }
 .article-body pre { overflow-x: auto; padding: 18px; background: #f4f6fa; border-radius: 8px; }
 .article-body code { font-size: .9em; }
 @media (max-width: 720px) { .blog-grid { grid-template-columns: 1fr; gap: 30px; } .blog-card-image, .blog-card-art { height: clamp(190px, 58vw, 280px); } .blog-hero { padding-block: 40px 32px; } .article-page { padding-bottom: 60px; } }
+.work-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
